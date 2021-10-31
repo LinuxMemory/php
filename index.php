@@ -38,8 +38,8 @@ var_dump($articles);
 	<h1>Store types</h1>
 	<?php foreach($articles as $articles): ?>
 	<ul>
-		<li><p><?php echo $articles['title']; ?></p></li>
-		<li><p><?php echo $articles['content']; ?><p></li>
+		<li><h3><?php echo $articles['title']; ?></h3></li>
+		<p><?php echo $articles['content']; ?><p>
 	</ul>
 	<?php endforeach; ?>
 </body>
