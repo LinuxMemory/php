@@ -10,7 +10,7 @@ if (mysqli_connect_error()) {
 echo mysqli_connect_error();
 
 }
-
+if (isset($_GET['id']) && is_numeric($_GET['id'])){
 $db = "select * from articles where id = " . $_GET['id'];
 
 $results = mysqli_query($conn, $db);
@@ -21,6 +21,10 @@ echo mysqli_error();
 
 $articles = mysqli_fetch_assoc($results);
 
+} else {
+$articles === null;
+
+}
 
 ?>
 
