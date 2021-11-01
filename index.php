@@ -35,12 +35,17 @@ var_dump($articles);
 		<title>First PHP page</title>
 	</head>
 <body>
+	<?php if (empty($articles)): ?>
+	<p><?php echo "No articles found"; ?></p>
+	<?php else: ?>
+	
 	<h1>Store types</h1>
 	<?php foreach($articles as $articles): ?>
 	<ul>
-		<li><h3><?php echo $articles['title']; ?></h3></li>
+		<li><h3><a href="article.php?id=<?php echo $articles['id']; ?>"><?php echo $articles['title']; ?></a></h3></li>
 		<p><?php echo $articles['content']; ?><p>
 	</ul>
 	<?php endforeach; ?>
+	<?php endif; ?>
 </body>
 </html>

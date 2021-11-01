@@ -11,7 +11,7 @@ echo mysqli_connect_error();
 
 }
 
-$db = "select * from articles where id=1;";
+$db = "select * from articles where id = " . $_GET['id'];
 
 $results = mysqli_query($conn, $db);
 
@@ -21,7 +21,6 @@ echo mysqli_error();
 
 $articles = mysqli_fetch_assoc($results);
 
-var_dump($articles);
 
 ?>
 
